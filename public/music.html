@@ -1,5 +1,50 @@
 <!DOCTYPE HTML>
 <html>
+  <style>
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+</style>
     <head><link rel="stylesheet" href="music.css">
     </head>
     <body>
@@ -152,7 +197,7 @@
   </div>
   <div class="texts">
   <p class="title-1">Sorry Bout That</p>
-  <audio id="audio2" src="Flawless.mp3"></audio>
+  
   
   </div>
   </div>
@@ -170,7 +215,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
   <path clip-rule="evenodd" d="M12 21.6a9.6 9.6 0 1 0 0-19.2 9.6 9.6 0 0 0 0 19.2Zm.848-12.352a1.2 1.2 0 0 0-1.696-1.696l-3.6 3.6a1.2 1.2 0 0 0 0 1.696l3.6 3.6a1.2 1.2 0 0 0 1.696-1.696L11.297 13.2H15.6a1.2 1.2 0 1 0 0-2.4h-4.303l1.551-1.552Z" fill-rule="evenodd"></path>
 </svg>
-    <button onclick="music2()"class="icon-button" id="play-button2" aria-label="Icon Button">
+    <button onclick="musicsorry()"class="icon-button" id="play-button2" aria-label="Icon Button">
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="24" width="24">
     <path clip-rule="evenodd" d="M21.6 12a9.6 9.6 0 1 1-19.2 0 9.6 9.6 0 0 1 19.2 0ZM8.4 9.6a1.2 1.2 0 1 1 2.4 0v4.8a1.2 1.2 0 1 1-2.4 0V9.6Zm6-1.2a1.2 1.2 0 0 0-1.2 1.2v4.8a1.2 1.2 0 1 0 2.4 0V9.6a1.2 1.2 0 0 0-1.2-1.2Z" fill-rule="evenodd"></path>
   </svg>
@@ -191,7 +236,22 @@
   </div>
   <p class="timetext time_now">1</p>
   <p class="timetext time_full">3:06</p>
+  
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+Wanna Suggest A Song Type it Below
+  <widgetbot
+    server="1107079490158465137"
+    channel="1108898482787463258"
+    width="500"
+    height="500"
+></widgetbot>
+<script src="https://b9dq12-8080.csb.app/web/_aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0_/npm/@widgetbot/html-embed"></script>
     </body>
     <script src="music.js"></script>
     
@@ -207,7 +267,7 @@ function music()
 	audio.play();
 }
 
-function music2()
+function musicsorry()
 {
   var audio = new Audio('Sorrybout.mp3');
 	audio.play();

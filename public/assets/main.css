@@ -37,7 +37,7 @@ h1, h2 {
 .form input {
     position: absolute;
     
-    bottom: 50%;
+    bottom: 55%;
     
     width: 550px;
     height: 50px;
@@ -144,7 +144,7 @@ nav {
 }
 
 .hero button {
-  background-color: #1abc9c;
+  
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -237,7 +237,7 @@ transition: all 0.3s;
 
 .categories a:hover {
 background-color: #fff;
-color: #1abc9c;
+
 }
 
 footer {
@@ -383,4 +383,8 @@ svg:hover .tooltip {
             .fullscreen-btn:hover, .about-blank-btn:hover {
                 background-color: #FFFFFF;
                 color: #4285F4;
+            }
+            .apps {
+              position: absolute;
+              height: 30%;
             }

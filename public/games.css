@@ -1,10 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 .button {
@@ -114,14 +113,15 @@ svg:hover .tooltip {
   background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
   color: #ffffff;
 }
-html,body{
-  display: grid;
-  height: 100%;
-  display: inline;
+body{
+  
+  
   background-image: url('https://wallpapercave.com/wp/wp2763910.gif');
   background-size: cover;
+  font-family: Arial, sans-serif;
   
 }
+
 header {
   background-color: rgba(0,0,0,0.8);
   position: fixed;
@@ -159,6 +159,7 @@ nav {
   font-weight: 600;
   text-transform: uppercase;
 }
+
 .container{
   position: relative;
   width: 400px;

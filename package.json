@@ -1,7 +1,7 @@
 {
-  "name": "alloy",
+  "name": "Vibe",
   "version": "2.5.0",
-  "description": "A web proxy.",
+  "description": "Vibe Central Proxy.",
   "main": "server.js",
   "directories": {
     "lib": "lib"
@@ -20,9 +20,9 @@
   },
   "keywords": [
     "proxy",
-    "titanium network",
-    "alloy",
-    "alloyproxy",
+    "vibe central",
+    "vibe",
+    "CentralVibe",
     "web unblocker",
     "unblock",
     "web proxy",
@@ -30,7 +30,7 @@
     "workplace",
     "web filter"
   ],
-  "author": "Titanium Network",
+  "author": "Vibe Central",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/titaniumnetwork-dev/alloy/issues"

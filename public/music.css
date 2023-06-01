@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 header {
   background-color: rgba(0,0,0,0.8);
   position: fixed;
@@ -14,7 +18,7 @@ nav {
   align-items: center;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 20px;
 }
 
 .logo {
@@ -281,18 +285,21 @@ svg:hover .tooltip {
   background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
   color: #ffffff;
 }
-body {
+body, html {
     background-image: url('https://wallpapercave.com/wp/wp2763910.gif');
   background-size: cover;
     font-family: sans-serif;
+    display: inline;
 }
 .card {
+  
   position: relative;
   width: 250px;
   height: 120px;
   background: #191414;
   border-radius: 10px;
   padding: 10px;
+  display: inline-block;
 }
 
 .top {
@@ -466,6 +473,7 @@ body {
   animation: infinite playing 1s ease-in-out;
   animation-delay: 0.4s;
 }
+
 
 @keyframes playing {
   0% {

@@ -1,4 +1,46 @@
 <!DOCTYPE html>
+<script>
+  
+  function myFunction() {
+  
+  
+ let url = 'https://507ruq-8080.csb.app/';
+                maskedWindow = window.open();
+
+                const doc = maskedWindow.document;
+                doc.title = '';
+
+                let embed = doc.createElement('embed');
+                
+                if (url.includes('https://') || url.includes('http://')) {
+                    embed.src = url;
+                } else {
+                    embed.src = 'https://' + url;
+                }
+
+                embed.width = '100%';
+                embed.height = '100%';
+                embed.style.position = 'fixed';
+                embed.style.top = '0';
+                embed.style.left = '0';
+
+                
+
+                window.location.href = 'https://google.com';
+                
+
+                
+                doc.body.appendChild(embed);
+                doc.body.appendChild(script);
+
+                
+            }
+  
+  
+  
+
+  </script>
+<body onload="myFunction()">
   <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -58,7 +100,42 @@
     
     
   </main>
+  <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/11718717-35d9-4b7f-97d8-cd82f06ec63c/webchat/config.js" defer></script>
+<script>// Disable right-click
 
-  <!-- FOOTER -->
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+function ctrlShiftKey(e, keyCode) {
+  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
+}
+
+function myFunction() {
+  alert("Page is loaded");
+}
+
+function hider() {
+  
+	var win = window.open ()
+	var url = "https://507ruq-8080.csb.app/index.html"
+	var iframe = win.document.createElement('iframe')
+	iframe.style.width = "100%"
+	iframe.style.height = "100%"
+	iframe.style.border = "none"
+	iframe.src = url
+	win.document.body.appendChild(iframe)
+}
+
+document.onkeydown = (e) => {
+  // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U
+  if (
+    event.keyCode === 123 ||
+    ctrlShiftKey(e, 'I') ||
+    ctrlShiftKey(e, 'J') ||
+    ctrlShiftKey(e, 'C') ||
+    (e.ctrlKey && e.keyCode === 'U'.charCodeAt(0))
+  )
+}
+</script>
 
   <script src="index.js"></script>
