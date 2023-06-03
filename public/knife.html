@@ -1,0 +1,125 @@
+  <!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/main.css">
+        <style>
+            .container .star-widget input{
+                position: absolute;
+    left: 30%;
+  display: none;
+}
+.star-widget label{
+    
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  
+  
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+            .iframe-container {
+                position: relative;
+                display: inline-block;
+                border: none;
+            }
+   .fullscreen-btn, .about-blank-btn {
+                
+                background-color: #4285F4;
+                color: #FFFFFF;
+                font-size: 16px;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                margin-top: 10px;
+                float: left;
+                
+            }
+
+            .fullscreen-btn:hover, .about-blank-btn:hover {
+                background-color: #FFFFFF;
+                color: #4285F4;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <button data-text="Awesome" class="button">
+                <span class="actual-text">&nbsp;Vibe Central&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp; &nbsp;</span>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="proxy.html">Proxy</a></li>
+                <li><a href="anime.html">Anime</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="music.html">Music</a></li>
+            </ul>
+        </nav>
+
+        <div class="iframe-container">
+            <iframe src="/web/_aHR0cHM6Ly9kYXJrc2FsbW9ubWV0YWxsaWNlbmdpbmVlcmluZy5tZ2ZvMG9hbWZhb2dhZzBhZ2prYW9hMGRqLnJlcGwuY28=_/" scrolling="no" width="600px" height="500px" allowfullscreen></iframe>
+            
+        </div>
+        <div class="container">
+            <button class="fullscreen-btn" onclick="openFullscreen()">Fullscreen</button>
+            
+      <div class="post">
+        
+      </div>
+      <div class="star-widget">
+          
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+        
+          
+        </form>
+      </div>
+    </div>
+
+        <script>
+            // Function to open the iframe in fullscreen mode
+            function openFullscreen() {
+                var elem = document.getElementsByTagName("iframe")[0];
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            }
+        </script>
+        <script src="/assets/main.js"></script>
+    </body>
+</html>
