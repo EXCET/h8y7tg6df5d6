@@ -179,6 +179,7 @@ nav {
   font-size: 25px;
   color: #666;
   font-weight: 500;
+  
 }
 .container .edit{
   position: absolute;
@@ -298,6 +299,7 @@ form .btn button:hover{
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    
     
   }
   

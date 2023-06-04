@@ -50,6 +50,7 @@ h1, h2 {
     font-size: 14px;
     border-radius: 2px;
     border: solid 1px white;
+    text-align: center;
 }
 
 .form button {
