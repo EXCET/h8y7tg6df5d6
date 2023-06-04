@@ -1,0 +1,671 @@
+<!DOCTYPE HTML>
+<style>
+  body {
+    background-image: url('https://wallpapercave.com/wp/wp2763910.gif');
+  }
+  
+header {
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  
+  --animation-color: #37FF8B;
+  --fs-size: 1em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-family: Arial, sans-serif; /* updated font-family */
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  color: white;
+}
+/* this is the text, when you hover on button */
+.hover-text {
+    font-family: Arial, sans-serif;
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+    font-family: Arial, sans-serif;
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.uiverse {
+  position: relative;
+  background: #ffffff;
+  color: #000;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 150px;
+  height: 50px;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.uiverse:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+svg:hover span,
+svg:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.uiverse:hover,
+.uiverse:hover .tooltip,
+.uiverse:hover .tooltip::before {
+  background: linear-gradient(320deg, rgb(3, 77, 146), rgb(0, 60, 255));
+  color: #ffffff;
+}
+body{
+  
+  
+  background-image: url('https://wallpapercave.com/wp/wp2763910.gif');
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  
+}
+
+header {
+  background-color: rgba(0,0,0,0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.container{
+  position: relative;
+  width: 400px;
+  background: #111;
+  padding: 20px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}
+.icon-container {
+    
+    position: relative;
+    display: inline-block;
+    border: 2px solid #4285F4;
+    border-radius: 10px;
+    overflow: hidden;
+    
+  }
+.icon-container:hover {
+   
+  box-shadow: 0 0 74px -4px #4285F4;
+}
+.icon-text {
+    
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    width: 120%;
+    color: #FFFFFF;
+    background-color: #4285F4;
+    padding: 8px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+  }
+  
+  .icon-container:hover img {
+    transform: scale(1.1);
+  }
+  
+  .icon-container:active img {
+    transform: scale(0.9);
+  }
+  </style>
+<html>
+  
+    <head><link rel="stylesheet" href="games.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    </head>
+    <body>
+      <header>
+    <nav>
+      <button data-text="Awesome" class="button">
+    <span class="actual-text">&nbsp;Vibe Central&nbsp;</span>
+    <span class="hover-text" aria-hidden="true">&nbsp; &nbsp;</span>
+</button>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html">Games</a></li>
+        <li><a href="proxy.html">Proxy</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="music.html">Music</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <br>
+  <br>
+  <br>
+        
+        <a href="flappybird.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/R.8236922f79344ac0d169052e70f1937b?rik=%2fM%2fYMtMSOWO2dw&riu=http%3a%2f%2f1.bp.blogspot.com%2f-CEjgSX0fJwg%2fUvqUohh0P6I%2fAAAAAAAAAqM%2fISEwAe145Cw%2fs1600%2fFlappy_Bird_Logo_Image.jpg&ehk=wOcE2ASklFQvFnhCvkEhjzzrULWWNKtoO77M3vE4y1s%3d&risl=&pid=ImgRaw&r=0" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Flappy Bird
+    </div>
+  </div>
+</a>
+<a href="cookieclicker.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.VhwUjmDL6F4OuuVxzZXClQAAAA?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Cookie Clicker
+    </div>
+  </div>
+</a>
+<a href="minecraft.html">
+  <div class="icon-container">
+    <img src="https://1.bp.blogspot.com/-3vNI194MCHs/Xgq6W9FRaOI/AAAAAAAAAC0/75PdRUnSaM8OZ9gj3kxavyRZxL50BagKACLcBGAsYHQ/s1600/MCSquare71x71Logo.scale-400.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Minecraft
+    </div>
+  </div>
+</a>
+<a href="bloons4.html">
+  <div class="icon-container">
+    <img src="https://lh6.googleusercontent.com/proxy/jNDfkvIRqi8hY1TZl73CptEl0isnWedzkADEc59I3chf7RPv7lIbn0yQ7HPkSNPNK6jQ40hSb2Hg9OUIp6a4YVhbW3c8gKmIl9toB1CFrj_vvtb-A3ruexPjbM4ZGQlq_ah1fLyYQUoCuSLKHCRHvv1E8TIdX23FpnQ7o5EIGeBGhf1dmMO6LNLpLIjKMogocUU=s0-d" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Bloons Td4
+    </div>
+  </div>
+</a>
+<a href="bitlife.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.vpMb1caR4GSoNKS82ICbKQHaHa?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Bitlife
+    </div>
+  </div>
+</a>
+<a href="wordle.html">
+  <div class="icon-container">
+    <img src="wordle.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Wordle
+    </div>
+  </div>
+</a>
+<a href="cluster.html">
+  <div class="icon-container">
+    <img src="https://web-games.mgfo0oamfaogag0agjkaoa0dj.repl.co/games/cluster-rush/icon.jpg" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Cluster Truck
+    </div>
+  </div>
+</a>
+<a href="doodle.html">
+  <div class="icon-container">
+    <img src="https://web-games.mgfo0oamfaogag0agjkaoa0dj.repl.co/games/doodle-jump/doodle.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Doodle Jump
+    </div>
+  </div>
+</a>
+<a href="cut.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.JofWgOCcZ9u8A4u4Gs9fSQHaHa?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Cut The Rope
+    </div>
+  </div>
+</a>
+<a href="2048.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th?id=OSK.84915ab0fb4e3a82376deb66f8af6a1f&w=148&h=148&c=7&o=6&pid=SANGAM" alt="Example Image" width="150" height="150">
+    <div class="icon-text">2048
+    </div>
+  </div>
+</a>
+
+<a href="angry.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th?id=OSK.9abaf9dde31c70715024fe022da0778c&w=148&h=148&c=7&o=6&pid=SANGAM" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Angry Birds
+    </div>
+  </div>
+</a>
+<a href="rush.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.JzZ_Yrw4mo2ZCoPrb2RzUQHaFK?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Tunnel Rush
+    </div>
+  </div>
+</a>
+<a href="air.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/R.e2cb2d79d12077d7d22b573f750fc68d?rik=iLW8QO28kkzmlw&riu=http%3a%2f%2fwww.cbc.ca%2fkidscbc2%2fcontent%2fgames%2fair-hockey%2fairhockey_play-min.jpg&ehk=HlEDXAlHhwN8THR5TsOnqiG0CN6x0%2fhDvGmnxU2Jhp8%3d&risl=&pid=ImgRaw&r=0" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Air Hockey
+    </div>
+  </div>
+</a>
+<a href="osu.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/R.47acfece5a046bb5d8034fd3016518e3?rik=4YfCEsyK%2fz%2bcjA&pid=ImgRaw&r=0" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Osu
+    </div>
+  </div>
+</a>
+<a href="slope.html">
+  <div class="icon-container">
+    <img src="slopelogo.jfif" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Slope
+    </div>
+  </div>
+</a>
+<a href="monkey.html">
+  <div class="icon-container">
+    <img src="https://slope-game.github.io/img/mk.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Monkey Mart
+    </div>
+  </div>
+</a>
+<a href="tomb.html">
+  <div class="icon-container">
+    <img src="https://slope-game.github.io/new5923/tomb/logo.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Tomb Of The Mask
+    </div>
+  </div>
+</a>
+<a href="ela.html">
+  <div class="icon-container">
+    <img src="https://ubg77.github.io/updatefaqs/elasticman/logo.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Elastic Face
+    </div>
+  </div>
+</a>
+
+<a href="crowd.html">
+  <div class="icon-container">
+    <img src="https://slope-game.github.io/rungame/crowd-run-3d/logo.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Crowd Run
+    </div>
+  </div>
+</a>
+<a href="fnaf1.html">
+  <div class="icon-container">
+    <img src="https://slope-game.github.io/img/fnaf1.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Fnaf 1
+    </div>
+  </div>
+</a>
+<a href="idle.html">
+  <div class="icon-container">
+    <img src="https://slope-game.github.io/new3623/idle-breakout/logo.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Idle Breakout
+    </div>
+  </div>
+</a>
+<a href="alc.html">
+  <div class="icon-container">
+    <img src="https://www.cinemascomics.com/wp-content/uploads/2017/09/little-alchemy-2-juego.jpg" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Little Alchemy 2
+    </div>
+  </div>
+</a>
+<a href="basket.html">
+  <div class="icon-container">
+    <img src="Games/basket/splash.jpeg" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Basket Random
+    </div>
+  </div>
+</a>
+<a href="hknight.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/R.ca4b2b0f27a888622711d298172ade79?rik=OXiMx0kSO13KCg&pid=ImgRaw&r=0" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Hollow Knight
+    </div>
+  </div>
+</a>
+<a href="fall.html">
+  <div class="icon-container">
+    <img src="Games/just-fall/unnamed.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Just Fall.lol
+    </div>
+  </div>
+</a>
+<a href="run3.html">
+  <div class="icon-container">
+    <img src="run3.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Run 3
+    </div>
+  </div>
+</a>
+<a href="motox3m.html">
+  <div class="icon-container">
+    <img src="moto2.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Moto X3M
+    </div>
+  </div>
+</a>
+<a href="chess.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.oRrCpNOqQobks7fjtzJ0zwHaHa?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Chess
+    </div>
+  </div>
+</a>
+<a href="sonic.html">
+  <div class="icon-container">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a247c940-3a86-406a-9fd4-4e7ef0f1bca3/dauuwcd-66688bd0-a1aa-48de-b39e-4c4e16af015e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2EyNDdjOTQwLTNhODYtNDA2YS05ZmQ0LTRlN2VmMGYxYmNhM1wvZGF1dXdjZC02NjY4OGJkMC1hMWFhLTQ4ZGUtYjM5ZS00YzRlMTZhZjAxNWUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.PHBmvjnDz6mS6nWb8sNKC-3eDPaxqODvQq-ruhpOtUw" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Sonic
+    </div>
+  </div>
+</a>
+<a href="hang.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.-XdA4eH4KhUNY4bro_f5YwAAAA?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Hangman
+    </div>
+  </div>
+</a>
+<a href="checkers.html">
+  <div class="icon-container">
+    <img src="https://th.bing.com/th/id/OIP.gzrpL6koXH9gkIRW_O9v0QAAAA?pid=ImgDet&rs=1" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Checkers
+    </div>
+  </div>
+</a>
+<a href="knife.html">
+  <div class="icon-container">
+    <img src="Games/knife/512x512.jpg" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Knife Master
+    </div>
+  </div>
+</a>
+<a href="karts.html">
+  <div class="icon-container">
+    <img src="Games/karts/images/icon-512.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Smash Karts
+    </div>
+  </div>
+</a>
+<a href="paper.html">
+  <div class="icon-container">
+    <img src="Games/paperio2/images/icon512.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Paper.io
+    </div>
+  </div>
+</a>
+<a href="subwaysurfers.html">
+  <div class="icon-container">
+    <img src="Games/subway-surfers/img/splash.jpg" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Subway Surfers
+    </div>
+  </div>
+</a>
+<a href="volly.html">
+  <div class="icon-container">
+    <img src="Games/volley-random/splash.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Volley Random
+    </div>
+  </div>
+</a>
+<a href="tanuki.html">
+  <div class="icon-container">
+    <img src="https://styles.redditmedia.com/t5_2gi6t0/styles/communityIcon_hifqe5rw8kj41.png?width=256&s=102c5f4bd2ecb03b1fc254b5cc1d6490477c21ab" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Tanuki Sunset
+    </div>
+  </div>
+</a>
+<a href="poor-bunny.html">
+  <div class="icon-container">
+    <img src="bunny.png" alt="Example Image" width="150" height="150">
+    <div class="icon-text">Poor Bunny
+    </div>
+  </div>
+</a>
+
+
+
+
+
+
+    </body>
+    <script src="games.js"></script>
+    <script>const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }</script>
+</html>
